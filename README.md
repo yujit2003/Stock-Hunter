@@ -1,3 +1,15 @@
+Video Demo -> https://www.loom.com/share/35f58910551745f09c33495509334c12?sid=53873694-261d-4ec3-ac9b-48d80df4472d
+
+![image](https://github.com/yujit2003/Stock-Hunter/assets/97657345/23807af4-cb70-4c0d-bdaf-fdac8f1b0ae4)
+
+![image](https://github.com/yujit2003/Stock-Hunter/assets/97657345/affcd13f-59e3-42ee-8b30-a4eccdfafe89)
+
+![image](https://github.com/yujit2003/Stock-Hunter/assets/97657345/eb67e229-2291-47ce-8cbc-a028c2f6238f)
+
+![image](https://github.com/yujit2003/Stock-Hunter/assets/97657345/72211f00-7c1b-4442-a1af-345ebf12e8eb)
+
+![image](https://github.com/yujit2003/Stock-Hunter/assets/97657345/19bdb9e4-d974-4d9b-a250-a3c4997467fb)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
