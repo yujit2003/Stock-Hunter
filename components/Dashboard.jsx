@@ -63,8 +63,8 @@ const Dashboard = () => {
     }, [search]);
 
     const fetchStock = async () => {
-        // let API_Call = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=70O5LSBEM4RP07TA`;
-        let API_Call = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=tesco&apikey=demo`;
+        // let API_Call = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=V3ULW7KC6BQWWRJI`;
+        let API_Call = `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=BA&apikey=demo`;
 
 
         fetch(API_Call)
@@ -116,7 +116,7 @@ const Dashboard = () => {
                             <LinearProgress style={{ backgroundColor: "gold", width:"100%"}} />
                         ) : (
                             <TableBody>
-                                {symbol.map((row) => {
+                                {symbol && symbol.map((row) => {
                                     return (
                                         <TableRow
                                             onClick={() =>router.replace(`dashboard/${row['1. symbol']}`)}

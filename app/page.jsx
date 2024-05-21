@@ -10,8 +10,8 @@ export default async function Home() {
   if (session) redirect("/dashboard");
 
   return (
-    <main>
+    <div className='bg-slate-800 text-white min-h-[100vh]'>
       <LoginForm />
-    </main>
+    </div>
   );
 }

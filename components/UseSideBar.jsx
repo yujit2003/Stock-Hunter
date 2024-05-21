@@ -1,9 +1,11 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { Avatar, Button } from "@material-ui/core";
 import { AiFillDelete } from "react-icons/ai";
 import { signOut, useSession, auth } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const useStyles = makeStyles({
   container: {
@@ -48,7 +50,7 @@ const useStyles = makeStyles({
     gap: 12,
     overflowY: "scroll",
   },
-  coin: {
+  symbol: {
     padding: 10,
     borderRadius: 5,
     color: "black",
@@ -67,6 +69,7 @@ export default function UseSideBar() {
   const [email, setEmail] = useState("");
   const [user, setUser] = useState({});
   const [watchList, setWatchList] = useState([]);
+  const router = useRouter();
   const [state, setState] = React.useState({
     right: false,
   });
@@ -117,9 +120,9 @@ export default function UseSideBar() {
     }
   };
 
-  const removeFromWatchlist = async (coin) => {
+  const removeFromWatchlist = async (symbol) => {
     try {
-      const updatedWatchList = watchList.filter(item => item !== coin);
+      const updatedWatchList = watchList.filter(item => item !== symbol);
       setWatchList(updatedWatchList);
 
       const res = await fetch("/api/watchList", {
@@ -196,15 +199,18 @@ export default function UseSideBar() {
                     Watchlist
                   </span>
                   {watchList.length > 0 ? (
-                    watchList.map((coin, index) => (
-                      <div className={classes.coin} key={index}>
-                        <span>{coin}</span>
+                    watchList.map((symbol, index) => (
+                      <div className={classes.symbol} key={index}>
+                        <Button
+                          onClick={() => router.replace(`dashboard/${symbol}`)}
+                        >{symbol}
+                        </Button>
                         <span style={{ display: "flex", gap: 8 }}>
                           Remove
                           <AiFillDelete
                             style={{ cursor: "pointer" }}
                             fontSize="16"
-                            onClick={() => removeFromWatchlist(coin)}
+                            onClick={() => removeFromWatchlist(symbol)}
                           />
                         </span>
                       </div>
@@ -218,7 +224,7 @@ export default function UseSideBar() {
               <Button
                 variant="contained"
                 className={classes.logout}
-              // onClick={logOut}
+                onClick={() => signOut()}
               >
                 Log Out
               </Button>

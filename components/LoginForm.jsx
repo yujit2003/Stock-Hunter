@@ -35,19 +35,21 @@ export default function LoginForm() {
 
   return (
     <div className="grid place-items-center h-screen">
-      <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
+      <div className="shadow-lg p-5 rounded-lg border-t-4 border-yellow-400 bg-white text-black">
         <h1 className="text-xl font-bold my-4">Login</h1>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3 ">
           <input
             onChange={(e) => setEmail(e.target.value)}
             type="text"
             placeholder="Email"
+            className="border-slate-500"
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="Password"
+            className="border-slate-500"
           />
           <button className="bg-green-600 text-white font-bold cursor-pointer px-6 py-2">
             Login
