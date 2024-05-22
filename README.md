@@ -13,6 +13,12 @@ Video Demo -> https://www.loom.com/share/35f58910551745f09c33495509334c12?sid=53
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+1. npm install
+2. add .env file containing
+MONGODB_URI
+NEXTAUTH_SECRET
+NEXTAUTH_URL
+3.npm run dev
 
 First, run the development server:
 
