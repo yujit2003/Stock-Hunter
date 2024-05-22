@@ -19,9 +19,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 1. npm install
-2. add .env file containing
-MONGODB_URI, NEXTAUTH_SECRET, NEXTAUTH_URL
-3.npm run dev
+2. add .env file containing MONGODB_URI, NEXTAUTH_SECRET, NEXTAUTH_URL
+3. npm run dev
 
 First, run the development server:
 
