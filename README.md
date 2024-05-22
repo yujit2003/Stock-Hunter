@@ -1,3 +1,8 @@
+1. npm install
+2. add .env file containing
+MONGODB_URI, NEXTAUTH_SECRET, NEXTAUTH_URL
+3.npm run dev
+
 Video Demo -> https://www.loom.com/share/35f58910551745f09c33495509334c12?sid=53873694-261d-4ec3-ac9b-48d80df4472d
 
 ![image](https://github.com/yujit2003/Stock-Hunter/assets/97657345/23807af4-cb70-4c0d-bdaf-fdac8f1b0ae4)
@@ -15,9 +20,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 1. npm install
 2. add .env file containing
-MONGODB_URI
-NEXTAUTH_SECRET
-NEXTAUTH_URL
+MONGODB_URI, NEXTAUTH_SECRET, NEXTAUTH_URL
 3.npm run dev
 
 First, run the development server:
